@@ -1,33 +1,21 @@
 .afterbefore {
-  background-color: #0a1d4c; /* blue background */
-  padding: 3rem 1.5rem;
+  width: 100%;
+  padding: 2rem 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  background-color: #0a1d4c; /* ✅ Dark blue background */
 }
 
-.afterbefore-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* equal size */
-  gap: 0; /* no space between images */
+.afterbefore-container.centered-image {
+  width: 90%; /* Leaves some space on the sides */
   max-width: 1200px;
-  width: 100%;
 }
 
-.image-box {
-  overflow: hidden;
-}
-
-.image-box img {
+.afterbefore-container.centered-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* makes both same height */
+  height: auto;
   display: block;
-}
-
-/* Responsive: stack images on mobile */
-@media (max-width: 768px) {
-  .afterbefore-container {
-    grid-template-columns: 1fr;
-  }
+  border-radius: 10px; /* Optional: smooth corners */
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Nice soft shadow */
 }

@@ -1,16 +1,7 @@
-.feature-image {
-  width: 120px;   /* increased size */
-  height: 120px;  /* increased size */
-  margin: 0 auto 20px;
-  object-fit: contain;
-  display: block;
-}
-
-/* Keep the rest of your original CSS unchanged */
 .why-choose-section {
   background-color: #0a1d4c; /* Dark blue background */
   color: white;
-  padding: 80px 0;
+  padding: 50px 0;
   position: relative;
 }
 
@@ -22,59 +13,114 @@
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #FFA500; /* Orange color matching your design */
-  margin-bottom: 60px;
+  color: #FFA500; /* Orange color */
+  margin-bottom: 20px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 60px;
   margin-top: 20px;
 }
 
 .feature-card {
   text-align: center;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+  transition: transform 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
+/* Fade-up animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title above the image */
 .feature-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem; /* slightly bigger */
   font-weight: 700;
   color: #FFA500;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
+/* Image */
+.feature-image {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 15px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Description text below the image, bigger */
 .feature-description {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.2rem; /* increased from 1rem */
+  line-height: 1.6;
   color: #e0e0e0;
+  max-width: 200px; /* maintain wrapping */
+  margin: 0 auto;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 /* Responsive design */
 @media (max-width: 992px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .feature-description {
+    max-width: 180px;
+    font-size: 1.1rem;
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
-  
+
   .section-title {
     font-size: 2rem;
+  }
+
+  .feature-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .feature-description {
+    max-width: 90%;
+    font-size: 1.1rem;
+  }
+
+  .feature-title {
+    font-size: 1.4rem;
   }
 }

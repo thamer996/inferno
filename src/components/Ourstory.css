@@ -7,7 +7,7 @@
 
 .ourstory-container {
   background-color: #f7a600; /* orange */
-  padding: 4rem 3rem;  /* plus grand */
+  padding: 0rem 3rem;  /* plus grand */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,9 +36,9 @@
 
 .ourstory-image {
   position: absolute;
-  top:-150px;   /* monte plus haut */
-  right: -50px; /* dépasse plus */
-  width: 300px; /* bougie plus grande */
+  top:-130px;   /* monte plus haut */
+  right: -70px; /* dépasse plus */
+  width: 320px; /* bougie plus grande */
 }
 
 .ourstory-image img {

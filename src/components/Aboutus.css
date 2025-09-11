@@ -1,0 +1,55 @@
+.aboutus {
+  background-color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.aboutus-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aboutus h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.aboutus p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.aboutus .highlight {
+  font-weight: bold;
+  color: #f7a600;
+}
+
+.aboutus h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member p {
+  margin-top: 0.5rem;
+  color: #c92a2a;
+  font-weight: bold;
+}

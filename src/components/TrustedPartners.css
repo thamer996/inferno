@@ -1,0 +1,24 @@
+.trusted-partners {
+  background-color: #0a2540;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.trusted-partners h2 {
+  color: #f7a600;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.partner-logos img {
+  height: 50px;
+  object-fit: contain;
+}

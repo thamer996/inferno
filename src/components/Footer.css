@@ -1,0 +1,69 @@
+.footer {
+  background-color: white; /* ✅ White background */
+  color: #0a2540; /* Dark blue text for contrast */
+  padding: 3rem 1rem;
+  border-top: 2px solid #eee; /* Light separator */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer-logo img {
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #0a2540;
+  font-size: 1.2rem;
+}
+
+.footer-links a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #0a2540;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-newsletter p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.footer-newsletter button {
+  background-color: #0a2540;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer-newsletter button:hover {
+  background-color: #142f54;
+}

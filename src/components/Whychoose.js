@@ -5,13 +5,13 @@ const WhyChoose = () => {
   const features = [
     {
       image: '/images/first-icon.png',
-      title: 'Security',
-      description: 'Defend against intruders with reinforced shutter systems.'
+      title: 'Fire ',
+      description: 'Proven protection from wildfire embers, storms, and severe winds.'
     },
     {
       image: '/images/second-icon.png',
-      title: 'Fire & Weather',
-      description: 'Proven protection from wildfire embers, storms, and severe winds.'
+      title: 'Security',
+      description: 'Defend against intruders with reinforced shutter systems.'
     },
     {
       image: '/images/third-icon.png',
@@ -28,7 +28,7 @@ const WhyChoose = () => {
   return (
     <section className="why-choose-section">
       <div className="container">
-        <h2 className="section-title">Why Choose Inferno Shutters?</h2>
+        <h2 className="section-title">Why Choose Inferno-Roll Shutters?</h2>
         
         <div className="features-grid">
           {features.map((feature, index) => (

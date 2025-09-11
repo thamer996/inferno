@@ -1,41 +1,99 @@
+/* Hero Section */
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background-color: #0a1d4c;
 }
 
+/* Background container with image slightly shifted left */
 .hero-background {
   position: absolute;
   top: 0;
-  left: 0; 
-  width: 100%;
-  height: 100%;
+  left: -10%;
+  width: 110%;
+  height: 90%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #0a1d4c;
 }
 
+/* Hero Image */
 .hero-image {
-  width: 100%;
+  width: 80%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  z-index: 1;
 }
 
-/* Shadow rectangle slightly smaller and text shifted left */
+/* Arrows + Dots container */
+.hero-arrows-dots {
+  position: absolute;
+  bottom: 60px; /* moved up */
+  left: 65%;    /* moved right */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 2;
+}
+
+/* Arrow images smaller */
+.arrow {
+  width: 25px; /* smaller */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: translateY(-5px);
+}
+
+/* Dots aligned with arrows */
+.hero-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #f81515;
+}
+
+/* Shadow content box on the left */
 .hero-content {
   position: absolute;
-  top: 50%; 
-  left: 45%; /* move rectangle slightly left */
+  top: 50%;
+  left: 20%;
   transform: translate(-50%, -50%);
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 90%;          
-  max-width: 1100px;   
-  padding: 5rem 3rem;  
-  border-radius: 0;     
-  text-align: left;     
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 55%;
+  max-width: 600px;
+  padding: 2.5rem 2rem 2.5rem 3rem;
+  border-radius: 12px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Text inside shadow box */
+.hero-text {
+  padding-left: 2rem;
 }
 
 .hero-text h1 {
@@ -47,7 +105,7 @@
 .hero-text p {
   font-size: 1.3rem;
   line-height: 1.6;
-  color: #F8AA15; /* paragraph color */
+  color: #F8AA15;
 }
 
 .hero-buttons {
@@ -57,7 +115,7 @@
 }
 
 .btn-primary {
-  background-color: #f81515; /* red/orange */
+  background-color: #f81515;
   color: #fff;
   padding: 0.75rem 2rem;
   border: none;
@@ -71,9 +129,9 @@
 }
 
 .btn-secondary {
-  background-color: #000;  /* black */
-  color: #fff;             /* white text */
-  border: 2px solid #f81515; /* red border */
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #f81515;
   padding: 0.75rem 2rem;
   border-radius: 6px;
   cursor: pointer;
@@ -81,45 +139,59 @@
 }
 
 .btn-secondary:hover {
-  background-color: #222; /* slightly lighter black on hover */
-}
-
-/* Fire image container to hold firehero + candle */
-.fire-hero-container {
-  position: absolute;
-  bottom: 0;
-  right: 10%;
-  width: 200px; /* size of firehero image */
-  height: auto;
-  z-index: 2;
-}
-
-/* Firehero image */
-.fire-hero {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: relative;
-}
-
-/* Candle image inside firehero - slightly lower */
-.candle {
-  position: absolute;
-  bottom: 55%;  /* moved slightly lower */
-  left: 50%;    
-  transform: translateX(-50%);
-  width: 50px;  
-  height: auto;
+  background-color: #222;
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .hero-image {
+    width: 85%;
+  }
+
+  .hero-background {
+    left: -3%;
+    width: 106%;
+  }
+
+  .hero-content {
+    left: 25%;
+    width: 65%;
+    padding: 2rem 1.5rem 2rem 2.5rem;
+  }
+
+  .hero-arrows-dots {
+    left: 70%;
+    bottom: 55px;
+    gap: 10px;
+  }
+
+  .arrow {
+    width: 20px; /* smaller for tablet */
+  }
+}
+
 @media (max-width: 768px) {
+  .hero-background {
+    justify-content: center;
+    left: 0;
+    width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
   .hero-content {
     left: 50%;
-    max-width: 90%;
-    padding: 2rem 1rem;
+    width: 80%;
+    max-width: 500px;
+    padding: 1.5rem 1rem;
     transform: translate(-50%, -50%);
     text-align: center;
+  }
+
+  .hero-text {
+    padding-left: 0;
   }
 
   .hero-text h1 {
@@ -135,13 +207,13 @@
     gap: 1rem;
   }
 
-  .fire-hero-container {
-    width: 120px;
-    right: 5%;
+  .hero-arrows-dots {
+    left: 75%;
+    bottom: 40px;
+    gap: 8px;
   }
 
-  .candle {
-    width: 30px;
-    bottom: 35%; /* slightly lower on mobile */
+  .arrow {
+    width: 18px; /* smaller for mobile */
   }
 }

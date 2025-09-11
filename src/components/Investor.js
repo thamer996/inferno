@@ -10,8 +10,8 @@ const Investor = () => {
           Inferno Shutters is expanding. Discover investment opportunities in energy-efficient home protection.
         </p>
         <div className="investor-buttons">
-          <button className="investor-btn primary-btn">Learn More</button>
-          <button className="investor-btn secondary-btn">Contact Us</button>
+          <button className="investor-btn primary-btn">Learn More About us</button>
+         
         </div>
       </div>
     </section>
