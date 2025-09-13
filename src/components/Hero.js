@@ -27,6 +27,7 @@ const Hero = () => {
           alt={`Hero ${current + 1}`}
           className="hero-image"
         />
+
         {/* Arrows + Dots */}
         <div className="hero-arrows-dots">
           <img src="/images/Polygon 1.png" alt="Left Arrow" className="arrow" onClick={prevImage}/>
@@ -47,18 +48,19 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text">
           <h1>
-            Protect What Matters.
-            Save Energy. <br />Gain Peace of Mind.
+            Home Defense Meets Wildfire Science.
           </h1>
           <p>
-            Custom-installed fire, storm, and security shutters — engineered for safety,<br />
+            Custom-installed fire, storm, and security shutters — engineered for safety,
             savings, and lasting value.
           </p>
-          <div className="hero-buttons">
-            <button className="btn-primary">Get a Free Quote</button>
-            <button className="btn-secondary">Investor Info</button>
-          </div>
         </div>
+      </div>
+
+      {/* Buttons - Now top right of whole hero */}
+      <div className="hero-buttons-top">
+        <button className="btn-primary">Get a Free Quote</button>
+        <button className="btn-secondary">Investor Info</button>
       </div>
     </section>
   );

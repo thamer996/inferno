@@ -3,8 +3,8 @@ import "./Showcase.css";
 
 const Showcase = () => {
   const [images, setImages] = useState([
-    "/images/showcase.jpg",
-    "/images/showcase2.jpg"
+    "/images/house.jpg",
+    "/images/house2.jpg"
   ]);
 
   const handlePrev = () => {
@@ -33,8 +33,10 @@ const Showcase = () => {
 
         <span className="arrow" onClick={handleNext}>&rarr;</span>
       </div>
-<h2 className="showcase-title">“5 Ways Inferno Shutters Protect Your Home & Save Energy”</h2>
-      <button className="download-btn">Download Now</button>
+
+      <h2 className="showcase-subtitle">
+        “5 Ways Inferno Shutters Protect Your Home & Save Energy”
+      </h2>
     </section>
   );
 };

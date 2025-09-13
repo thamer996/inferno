@@ -1,29 +1,32 @@
 .investor-section {
   background-color: #f0f0f0; /* light grey background */
-  padding: 4rem 1.5rem;
+  padding: 1.5rem 2rem;
   display: flex;
-  justify-content: flex-start; /* move content to the left */
+  justify-content: flex-start; /* content aligned left */
   align-items: center;
-  text-align: left; /* align text to left */
+  text-align: left;
 }
 
 .investor-container {
-  max-width: 800px;
-  margin-left: 50px; /* optional extra left spacing */
+  width: 100%; /* ✅ take full width */
+  max-width: none; /* ✅ remove restriction */
+  margin-left: 0; /* ✅ remove forced offset */
 }
 
 .investor-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #F8AA15; /* title color updated */
+  color: #F8AA15; /* title color */
 }
 
 .investor-text {
-  font-size: 1.2rem;
+  font-size: 1.875rem; /* 30px */
+  font-weight: bold;
   margin-bottom: 2rem;
-  color: #333;
+  color: #172F55;
   line-height: 1.6;
+  width: 100%; /* ✅ text takes full container width */
 }
 
 .investor-buttons {
@@ -43,33 +46,35 @@
 
 /* Left button */
 .primary-btn {
-  background-color: #F8AA15; /* left button color */
+  background-color: #F8AA15;
   color: #fff;
 }
 
 .primary-btn:hover {
-  background-color: #d18a10; /* slightly darker on hover */
+  background-color: #d18a10;
 }
 
 /* Right button */
 .secondary-btn {
-  background-color: #555555; /* dark grey / force grey */
+  background-color: #555555;
   color: #fff;
   min-width: 300px; /* wider button */
 }
 
 .secondary-btn:hover {
-  background-color: #333333; /* darker grey on hover */
+  background-color: #333333;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .investor-section {
     justify-content: center;
-    text-align: center; /* center on small screens */
+    text-align: center;
   }
 
   .investor-container {
+    width: 100%;
+    max-width: 100%; /* make sure it stays full width */
     margin-left: 0;
   }
 
@@ -79,6 +84,7 @@
 
   .investor-text {
     font-size: 1rem;
+    width: 100%;
   }
 
   .investor-buttons {

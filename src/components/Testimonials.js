@@ -1,3 +1,4 @@
+// Testimonials.js
 import React from "react";
 import "./Testimonials.css"; // Import the CSS file
 
@@ -48,21 +49,15 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Right Side - Image + Title + Quote */}
+        {/* Right Side - Title + Image */}
         <div className="testimonials-right">
           <h2 className="title">Customer Testimonials</h2>
-          <div className="image-card">
+          <div className="image-card small">
             <img
               src="/images/firefighters.png"
               alt="Firefighters"
               className="image"
             />
-            <div className="image-overlay">
-              <h3>“You will save the lives of my firefighters!”</h3>
-              <p>
-                CCFD Fire Unit Chief Dan Bivins/Montgomery Counties Georgia/North
-              </p>
-            </div>
           </div>
         </div>
       </div>

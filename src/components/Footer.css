@@ -1,8 +1,10 @@
+/* Footer.css */
+
 .footer {
-  background-color: white; /* ✅ White background */
-  color: #0a2540; /* Dark blue text for contrast */
-  padding: 3rem 1rem;
-  border-top: 2px solid #eee; /* Light separator */
+  background-color: white;
+  color: #0a2540;
+  padding: 2rem 1rem;
+  border-top: 2px solid #eee;
 }
 
 .footer-container {
@@ -11,22 +13,55 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+  align-items: start;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-top: -30px; /* ✅ pushes logo a little bit up */
 }
 
 .footer-logo img {
-  height: 40px;
-  margin-bottom: 1rem;
+  height: 110px; /* ✅ slightly smaller for balance */
+  margin-bottom: 0.1rem;
+}
+
+.powered-by {
+  font-size: 0.95rem;
+  color: #000000;
+  margin: 0;
+  margin-left: 80px; /* ✅ shift subtitle slightly to the right */
+}
+
+.social-icons {
+  margin-top: 0.4rem;
 }
 
 .social-icons a {
-  margin-right: 10px;
+  margin-right: 12px;
   color: #0a2540;
   font-size: 1.2rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-links .email-label {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.footer-links .email {
+  margin: 0 0 0.5rem 0;
+}
+
 .footer-links a {
-  display: block;
-  margin-bottom: 0.5rem;
   color: #0a2540;
   text-decoration: none;
   font-weight: 500;
@@ -36,14 +71,19 @@
   text-decoration: underline;
 }
 
-.footer-newsletter p {
+.footer-newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.newsletter-title {
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem 0;
 }
 
 .footer-newsletter form {
   display: flex;
-  gap: 0.5rem;
 }
 
 .footer-newsletter input {
@@ -66,4 +106,26 @@
 
 .footer-newsletter button:hover {
   background-color: #142f54;
+}
+
+/* Responsive: Stack on small screens */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-logo,
+  .footer-links,
+  .footer-newsletter {
+    align-items: center;
+  }
+
+  .powered-by {
+    margin-left: 0; /* ✅ reset indentation for mobile for better centering */
+  }
+
+  .social-icons {
+    margin-top: 0.5rem;
+  }
 }

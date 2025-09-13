@@ -1,0 +1,34 @@
+.twoimages {
+  background-color: #0a1d4c;
+  padding: 0;
+  margin: 0;
+}
+
+.twoimages-container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 0; /* pas d'espace entre les images */
+}
+
+.twoimages-img {
+  width: 50%;      /* chaque image prend exactement la moitié */
+  height: 500px;   /* grande hauteur */
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive : mobile */
+@media (max-width: 768px) {
+  .twoimages-container {
+    flex-direction: column;
+  }
+  .twoimages-img {
+    width: 100%;
+    height: 350px;
+  }
+}

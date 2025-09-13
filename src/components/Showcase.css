@@ -1,5 +1,5 @@
 .showcase {
-   background-color: #0a1d4c; /* same blue */
+  background-color: #0a1d4c;
   padding: 3rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -9,33 +9,45 @@
 .showcase-title {
   color: #fff;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
+.showcase-subtitle {
+  color: #f7a600;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Container no background */
 .showcase-container {
-  background: #fff; /* white rectangle */
-  padding: 2rem;
+  padding: 1rem;
   max-width: 1000px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* center images */
   position: relative;
-  height: 400px; /* fixed rectangle height */
-  margin-bottom: 1.5rem;
+  height: 400px; /* slightly taller */
 }
 
+/* Images wrapper */
 .images-wrapper {
   display: flex;
   gap: 1rem;
-  width: 100%;
+  width: 100%; /* let images size naturally */
   height: 100%;
 }
 
+/* Individual image box */
 .image-box {
-  flex: 1;
+  flex: 0 0 48%; /* slightly bigger than 45% */
+  max-width: 48%;
   overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .image-box img {
@@ -43,40 +55,44 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 8px;
+  border-radius: 12px;
+}
+
+/* Hover effect */
+.image-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5);
 }
 
 /* Arrows */
 .arrow {
   font-size: 2rem;
-  color: #1e3a8a;
+  color: #f7a600;
   cursor: pointer;
   user-select: none;
   padding: 0 1rem;
+  transition: color 0.3s;
 }
 
-/* Download Button */
-.download-btn {
-  background-color: #dc2626; /* red */
-  color: #fff;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.download-btn:hover {
-  background-color: #b91c1c; /* darker red on hover */
+.arrow:hover {
+  color: #ffd700;
 }
 
 /* Responsive: stack images on mobile */
 @media (max-width: 768px) {
   .images-wrapper {
     flex-direction: column;
+    gap: 1rem;
+    width: 90%; /* fit smaller screens */
   }
   .arrow {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+  .showcase-container {
+    height: 350px;
+  }
+  .image-box {
+    flex: 1 1 100%; /* full width on mobile */
+    max-width: 100%;
   }
 }

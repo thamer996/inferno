@@ -1,25 +1,57 @@
+/* About Us Section */
 .aboutus {
+  position: relative;
   background-color: white;
-  padding: 3rem 1rem;
-  text-align: center;
+  padding: 2.5rem 1rem 4rem 1rem;/* space for content between lines */
+  text-align: left;
+  overflow: hidden;
 }
 
+/* Big red line at the top */
+.aboutus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* thickness of top line */
+  background-color: #FF3A27; /* red */
+}
+
+/* Big red line at the bottom */
+.aboutus::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* thickness of bottom line */
+  background-color: #FF3A27; /* red */
+}
+
+/* Container */
 .aboutus-container {
   max-width: 1200px;
   margin: 0 auto;
+  text-align: left;
+  position: relative; /* ensures content stays above the lines */
 }
 
+/* Section heading */
 .aboutus h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #222;
+  color: #172F55;
 }
 
+/* Intro paragraph */
 .aboutus p {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 30px;       /* 30px font size */
+  font-weight: 600;      /* semi-bold */
+  color: #f7a600;
   margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .aboutus .highlight {
@@ -27,29 +59,77 @@
   color: #f7a600;
 }
 
+/* Leadership heading */
 .aboutus h3 {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #222;
+  color: #172F55;
 }
 
+/* Team Grid (keep your current card design intact) */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
+  justify-items: center;
 }
 
-.team-member img {
-  width: 120px;
-  height: 120px;
+/* Team Member */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Team Image */
+.team-image {
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.3rem;
 }
 
-.team-member p {
-  margin-top: 0.5rem;
-  color: #c92a2a;
+/* Team Name */
+.team-name {
+  color: #FF3A27;
   font-weight: bold;
+  text-align: center;
+  margin: 0;
+  font-size: 1.2rem; /* visible */
+}
+
+/* Team Job */
+.team-job {
+  color: #FF3A27;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  margin-top: 0.2rem; /* closer to name */
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aboutus h2 {
+    font-size: 1.8rem;
+  }
+
+  .aboutus h3 {
+    font-size: 1.3rem;
+  }
+
+  .team-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-name {
+    font-size: 1rem;
+  }
+
+  .team-job {
+    font-size: 0.95rem;
+  }
 }
