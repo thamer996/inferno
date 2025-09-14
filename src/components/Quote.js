@@ -7,7 +7,6 @@ const Quote = () => {
       <div className="quote-container">
         {/* Left side: Image with overlay form */}
         <div className="quote-left">
-          <img src="/images/quote.jpg" alt="Quote" className="quote-image" />
           <form className="quote-form">
             <input type="text" placeholder="Full Name" required />
             <input type="email" placeholder="Email" required />
@@ -24,7 +23,7 @@ const Quote = () => {
             Reserve Your Inferno-Roll Shutters Today!
           </h2>
           <p className="quote-text">
-           Protect your home before wildfire season hits. Secure your place in line with a 
+           Protect your home before wildfire season hits. Secure your place in line with a 
 
             <span className="highlight"> $1,000 fully credited reservation fee.</span>
           </p>

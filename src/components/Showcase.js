@@ -20,7 +20,13 @@ const Showcase = () => {
       <h2 className="showcase-title">Our Showcase</h2>
 
       <div className="showcase-container">
-        <span className="arrow" onClick={handlePrev}>&larr;</span>
+        {/* Left arrow image */}
+        <img
+          src="/images/Polygon 1.png"
+          alt="Previous"
+          className="arrow arrow-left"
+          onClick={handlePrev}
+        />
 
         <div className="images-wrapper">
           <div className="image-box">
@@ -31,7 +37,13 @@ const Showcase = () => {
           </div>
         </div>
 
-        <span className="arrow" onClick={handleNext}>&rarr;</span>
+        {/* Right arrow image */}
+        <img
+          src="/images/Polygon 2.png"
+          alt="Next"
+          className="arrow arrow-right"
+          onClick={handleNext}
+        />
       </div>
 
       <h2 className="showcase-subtitle">

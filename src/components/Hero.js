@@ -23,14 +23,20 @@ const Hero = () => {
       {/* Background Image */}
       <div className="hero-background">
         <img
+          key={current} /* re-render for animation */
           src={images[current]}
           alt={`Hero ${current + 1}`}
-          className="hero-image"
+          className="hero-image active"
         />
 
         {/* Arrows + Dots */}
         <div className="hero-arrows-dots">
-          <img src="/images/Polygon 1.png" alt="Left Arrow" className="arrow" onClick={prevImage}/>
+          <img
+            src="/images/Polygon 1.png"
+            alt="Left Arrow"
+            className="arrow"
+            onClick={prevImage}
+          />
           <div className="hero-dots">
             {images.map((_, index) => (
               <span
@@ -40,16 +46,19 @@ const Hero = () => {
               ></span>
             ))}
           </div>
-          <img src="/images/Polygon 2.png" alt="Right Arrow" className="arrow" onClick={nextImage}/>
+          <img
+            src="/images/Polygon 2.png"
+            alt="Right Arrow"
+            className="arrow"
+            onClick={nextImage}
+          />
         </div>
       </div>
 
       {/* Overlay Content */}
       <div className="hero-content">
         <div className="hero-text">
-          <h1>
-            Home Defense Meets Wildfire Science.
-          </h1>
+          <h1>Home Defense Meets Wildfire Science.</h1>
           <p>
             Custom-installed fire, storm, and security shutters — engineered for safety,
             savings, and lasting value.
@@ -57,7 +66,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Buttons - Now top right of whole hero */}
+      {/* Buttons */}
       <div className="hero-buttons-top">
         <button className="btn-primary">Get a Free Quote</button>
         <button className="btn-secondary">Investor Info</button>

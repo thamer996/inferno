@@ -1,6 +1,6 @@
 .twoimages {
   background-color: #0a1d4c;
-  padding: 0;
+  padding: 2rem; /* some padding for cards to breathe */
   margin: 0;
 }
 
@@ -9,26 +9,86 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  gap: 0; /* pas d'espace entre les images */
+  gap: 0; /* images stay touching */
 }
 
-.twoimages-img {
-  width: 50%;      /* chaque image prend exactement la moitié */
-  height: 500px;   /* grande hauteur */
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;          /* more spacing between cards */
+  flex: none;
+  margin-left: auto;     /* push cards to far right */
+}
+
+/* White Cards */
+.card {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #0a1d4c;
+  max-width: 250px;      /* keep cards uniform size */
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Card title */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1e3a8a; /* darker accent */
+}
+
+/* Card text */
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Images remain unchanged */
+.left-img {
+  width: 35%;
+  height: 500px;
   object-fit: cover;
-  border-radius: 0;
   display: block;
-  margin: 0;
-  padding: 0;
 }
 
-/* Responsive : mobile */
+.right-img {
+  width: 35%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .twoimages-container {
     flex-direction: column;
+    align-items: center;
   }
-  .twoimages-img {
+
+  .left-img,
+  .right-img {
     width: 100%;
     height: 350px;
+  }
+
+  .cards-wrapper {
+    width: 100%;
+    margin-left: 0;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
   }
 }
