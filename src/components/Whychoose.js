@@ -4,22 +4,22 @@ import './WhyChoose.css';
 const WhyChoose = () => {
   const features = [
     {
-      image: '/images/first-icon.png',
-      title: 'Fire ',
+      image: `${process.env.PUBLIC_URL}/images/first-icon.png`,
+      title: 'Fire',
       description: 'Proven protection from wildfire embers, storms, and severe winds.'
     },
     {
-      image: '/images/second-icon.png',
+      image: `${process.env.PUBLIC_URL}/images/second-icon.png`,
       title: 'Security',
       description: 'Defend against intruders with reinforced shutter systems.'
     },
     {
-      image: '/images/third-icon.png',
+      image: `${process.env.PUBLIC_URL}/images/third-icon.png`,
       title: 'Savings',
       description: 'Cut utility bills by up to 30% with energy-efficient insulation.'
     },
     {
-      image: '/images/fourth-icon.png',
+      image: `${process.env.PUBLIC_URL}/images/fourth-icon.png`,
       title: 'Service',
       description: 'Financing and maintenance ensure long-term performance.'
     }

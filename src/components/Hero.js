@@ -3,9 +3,9 @@ import '../../src/components/Hero.css';
 
 const Hero = () => {
   const images = [
-    "/images/hero image.jpg",
-    "/images/hero image2.jpg",
-    "/images/hero image3.jpg"
+    `${process.env.PUBLIC_URL}/images/hero image.jpg`,
+    `${process.env.PUBLIC_URL}/images/hero2.jpg`,
+    `${process.env.PUBLIC_URL}/images/hero image3.jpg`
   ];
 
   const [current, setCurrent] = useState(0);
@@ -32,7 +32,7 @@ const Hero = () => {
         {/* Arrows + Dots */}
         <div className="hero-arrows-dots">
           <img
-            src="/images/Polygon 1.png"
+            src={`${process.env.PUBLIC_URL}/images/Polygon 1.png`}
             alt="Left Arrow"
             className="arrow"
             onClick={prevImage}
@@ -47,7 +47,7 @@ const Hero = () => {
             ))}
           </div>
           <img
-            src="/images/Polygon 2.png"
+            src={`${process.env.PUBLIC_URL}/images/Polygon 2.png`}
             alt="Right Arrow"
             className="arrow"
             onClick={nextImage}

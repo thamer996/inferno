@@ -8,7 +8,7 @@ const Navbar = () => {
         {/* Logo + Title centered */}
         <div className="logo-title-container">
           <img
-            src="/images/Logo inferno.png"
+            src={`${process.env.PUBLIC_URL}/images/LogoInferno.png`} 
             alt="Logo"
             className="logo"
           />

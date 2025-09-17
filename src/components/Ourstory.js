@@ -14,7 +14,10 @@ const Ourstory = () => {
           </p>
         </div>
         <div className="ourstory-image">
-          <img src="/images/bigcandl.png" alt="Big Candle" />
+          <img 
+            src={`${process.env.PUBLIC_URL}/images/bigcandl.png`} 
+            alt="Big Candle" 
+          />
         </div>
       </div>
     </section>

@@ -3,8 +3,8 @@ import "./Showcase.css";
 
 const Showcase = () => {
   const [images, setImages] = useState([
-    "/images/house.jpg",
-    "/images/house2.jpg"
+    `${process.env.PUBLIC_URL}/images/house.jpg`,
+    `${process.env.PUBLIC_URL}/images/house2.jpg`
   ]);
 
   const handlePrev = () => {
@@ -20,14 +20,6 @@ const Showcase = () => {
       <h2 className="showcase-title">Our Showcase</h2>
 
       <div className="showcase-container">
-        {/* Left arrow image */}
-        <img
-          src="/images/Polygon 1.png"
-          alt="Previous"
-          className="arrow arrow-left"
-          onClick={handlePrev}
-        />
-
         <div className="images-wrapper">
           <div className="image-box">
             <img src={images[0]} alt="Showcase left" />
@@ -37,13 +29,21 @@ const Showcase = () => {
           </div>
         </div>
 
-        {/* Right arrow image */}
-        <img
-          src="/images/Polygon 2.png"
-          alt="Next"
-          className="arrow arrow-right"
-          onClick={handleNext}
-        />
+        {/* ✅ Arrow controls inside a wrapper for flex control */}
+        <div className="arrow-controls">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/Polygon 1.png`}
+            alt="Previous"
+            className="arrow arrow-left"
+            onClick={handlePrev}
+          />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/Polygon 2.png`}
+            alt="Next"
+            className="arrow arrow-right"
+            onClick={handleNext}
+          />
+        </div>
       </div>
 
       <h2 className="showcase-subtitle">

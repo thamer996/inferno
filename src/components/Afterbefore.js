@@ -5,7 +5,10 @@ const Afterbefore = () => {
   return (
      <section className="afterbefore">
       <div className="afterbefore-container centered-image">
-        <img src="/images/after-before.png" alt="After and Before" />
+        <img 
+          src={`${process.env.PUBLIC_URL}/images/after.png`} 
+          alt="After and Before" 
+        />
       </div>
     </section>
   );

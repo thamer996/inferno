@@ -5,25 +5,25 @@ const FourCards = () => {
   const cards = [
     {
       id: 1,
-      image: "/images/callfire.png",
+      image: `${process.env.PUBLIC_URL}/images/callfire.png`,
       title: "CAL FIRE Home Hardening",
       text: "Installed to support ember-resistant best practices and defensible space planning"
     },
     {
       id: 2,
-      image: "/images/iconspace.jpg",
+      image: `${process.env.PUBLIC_URL}/images/iconspace.jpg`,
       title: "PRC 4291 Defensible Space",
       text: "Guidance for creating and maintaining the first 0–100 feet around structures."
     },
     {
       id: 3,
-      image: "/images/iconhome.png",
+      image: `${process.env.PUBLIC_URL}/images/iconhome.png`,
       title: "Safer from Wildfires Home Hardening Credits",
       text: "Documentation package to support potential insurer discounts where available"
     },
     {
       id: 4,
-      image: "/images/iconx.jpg",
+      image: `${process.env.PUBLIC_URL}/images/iconx.jpg`,
       title: "FAIR Plan Readiness (CA)",
       text: "Install and photo log aligned for broker submissions and eligibility reviews"
     }
@@ -34,7 +34,7 @@ const FourCards = () => {
       {/* ✅ Section title + subtitle */}
       <div className="section-header">
         <h2 className="section-title">
-                  Wildfire Standards & Insurance Readiness
+          Wildfire Standards & Insurance Readiness
         </h2>
         <p className="section-subtitle">
           “Our products and installation practices are aligned with leading guidelines to help homeowners document risk-reduction steps for insurers.”
@@ -45,7 +45,6 @@ const FourCards = () => {
       <div className="fourcards-container">
         {cards.map((card) => (
           <div key={card.id} className="card">
-            {/* 👇 Add dynamic className per image */}
             <img
               src={card.image}
               alt={card.title}

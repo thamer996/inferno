@@ -54,7 +54,7 @@ const Testimonials = () => {
           <h2 className="title">Customer Testimonials</h2>
           <div className="image-card small">
             <img
-              src="/images/firefighters.png"
+              src={`${process.env.PUBLIC_URL}/images/fighterss.png`}
               alt="Firefighters"
               className="image"
             />

@@ -9,7 +9,10 @@ const Footer = () => {
         
         {/* Left - Logo + Powered by + Socials */}
         <div className="footer-logo">
-          <img src="/images/Logo Inferno.png" alt="Inferno Roll Logo" />
+          <img 
+            src={`${process.env.PUBLIC_URL}/images/LogoInferno.png`} 
+            alt="Inferno Roll Logo" 
+          />
           <p className="powered-by">Powered by Sun & Security</p>
           <div className="social-icons">
             <a href="#"><i className="fab fa-facebook"></i></a>
