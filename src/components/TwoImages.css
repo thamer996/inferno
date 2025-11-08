@@ -1,6 +1,6 @@
 .twoimages {
   background-color: #0a1d4c;
-  padding: 2rem; /* some padding for cards to breathe */
+  padding: 2rem;
   margin: 0;
 }
 
@@ -9,66 +9,62 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  gap: 0; /* images stay touching */
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-img {
+  width: 70%;
+  height: auto;             /* ✅ height adjusts automatically */
+  object-fit: contain;      /* ✅ ensures full image is always visible */
+  display: block;
+}
+
+.right-img {
+  width: 30%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .cards-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;          /* more spacing between cards */
+  gap: 1.5rem;
   flex: none;
-  margin-left: auto;     /* push cards to far right */
+  margin-left: auto;
 }
 
-/* White Cards */
 .card {
   background-color: #ffffff;
   padding: 1.5rem 2rem;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
-  color: #0a1d4c;
-  max-width: 250px;      /* keep cards uniform size */
+  color: #000000;
+  max-width: 190px;
 }
 
-/* Hover effect */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* Card title */
 .card-title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #1e3a8a; /* darker accent */
+  color: #000000;
 }
 
-/* Card text */
 .card-text {
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
 }
 
-/* Images remain unchanged */
-.left-img {
-  width: 35%;
-  height: 500px;
-  object-fit: cover;
-  display: block;
-}
-
-.right-img {
-  width: 35%;
-  height: 500px;
-  object-fit: cover;
-  display: block;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .twoimages-container {
     flex-direction: column;
     align-items: center;
@@ -76,8 +72,7 @@
 
   .left-img,
   .right-img {
-    width: 100%;
-    height: 350px;
+    width: 80%;
   }
 
   .cards-wrapper {

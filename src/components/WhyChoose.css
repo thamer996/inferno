@@ -1,7 +1,7 @@
 .why-choose-section {
   background-color: #0a1d4c; /* Dark blue background */
   color: white;
-  padding: 50px 0;
+  padding: 5px 0;
   position: relative;
 }
 
@@ -112,7 +112,7 @@
 
   .feature-image {
     width: 140px;
-    height: 140px;
+    height: 200px;
   }
 
   .feature-description {

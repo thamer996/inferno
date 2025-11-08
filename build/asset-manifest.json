@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/inferno/static/css/main.1d78769d.css",
-    "main.js": "/inferno/static/js/main.b9b7cb68.js",
-    "index.html": "/inferno/index.html",
-    "main.1d78769d.css.map": "/inferno/static/css/main.1d78769d.css.map",
-    "main.b9b7cb68.js.map": "/inferno/static/js/main.b9b7cb68.js.map"
+    "main.css": "./static/css/main.9ae8ec51.css",
+    "main.js": "./static/js/main.64c0c4f3.js",
+    "index.html": "./index.html",
+    "main.9ae8ec51.css.map": "./static/css/main.9ae8ec51.css.map",
+    "main.64c0c4f3.js.map": "./static/js/main.64c0c4f3.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d78769d.css",
-    "static/js/main.b9b7cb68.js"
+    "static/css/main.9ae8ec51.css",
+    "static/js/main.64c0c4f3.js"
   ]
 }

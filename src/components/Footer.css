@@ -20,12 +20,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.3rem;
-  margin-top: -30px; /* ✅ pushes logo a little bit up */
+  gap: 0.2rem;
+  margin-top: -30px;
+  margin-left: 0; /* move fully to the left */
 }
 
 .footer-logo img {
-  height: 110px; /* ✅ slightly smaller for balance */
+  height: 80px; /* slightly smaller for balance */
   margin-bottom: 0.1rem;
 }
 
@@ -33,17 +34,26 @@
   font-size: 0.95rem;
   color: #000000;
   margin: 0;
-  margin-left: 80px; /* ✅ shift subtitle slightly to the right */
+  margin-left: 20px; /* shift subtitle slightly to the right */
 }
 
+/* Social icons horizontal, pushed down */
 .social-icons {
-  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: row; /* horizontal */
+  gap: 1rem; /* space between icons */
+  margin-top: 2rem; /* move down below logo/description */
 }
 
-.social-icons a {
-  margin-right: 12px;
-  color: #0a2540;
-  font-size: 1.2rem;
+.social-icons a svg {
+  width: 30px;
+  height: 30px;
+  fill: #f81515; /* red color */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  transform: scale(1.2);
 }
 
 .footer-links {
@@ -75,11 +85,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-left: auto; /* pushes newsletter further right */
 }
 
 .newsletter-title {
-  font-weight: bold;
   margin: 0 0 0.5rem 0;
+  font-size: 2rem; /* increase title size */
+  font-weight: bold;
 }
 
 .footer-newsletter form {
@@ -122,10 +134,64 @@
   }
 
   .powered-by {
-    margin-left: 0; /* ✅ reset indentation for mobile for better centering */
+    margin-left: 0; /* reset indentation for mobile */
   }
 
   .social-icons {
-    margin-top: 0.5rem;
+    justify-content: center;
+    gap: 1rem;
   }
+  /* Modal overlay - full screen */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+/* Modal box */
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 600px;
+  height: 80vh; /* fixed height */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* important */
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Scrollable content */
+.modal-body {
+  padding: 1rem;
+  overflow-y: auto; /* enables scroll */
+  flex-grow: 1;     /* fills vertical space */
+}
+
+/* Modal header */
+.modal-content h2 {
+  padding: 1rem;
+  margin: 0;
+}
+
+/* Close button */
+.modal-btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  align-self: flex-end;
+  background-color: #f81515;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 }

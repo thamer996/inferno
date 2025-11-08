@@ -2,12 +2,12 @@ import React from "react";
 import "./Aboutus.css";
 
 const teamMembers = [
-  { name: "David One", job: "CEO & CO-Founder", image: `${process.env.PUBLIC_URL}/images/davidone.png` },
-  { name: "Glenn Roehl", job: "CO-FOUNDER & VP", image: `${process.env.PUBLIC_URL}/images/glenn.png` },
-  { name: "Eric Hawkinson", job: "CMO", image: `${process.env.PUBLIC_URL}/images/eric.png` },
+  { name: "David Horobin", job: " CO-Founder & CEO  ", image: `${process.env.PUBLIC_URL}/images/davidone.png` },
+  { name: "Glenn Roehl", job: "CO-Founder & VP", image: `${process.env.PUBLIC_URL}/images/glenn.png` },
+  { name: "Erik Hawkinson", job: "CMO", image: `${process.env.PUBLIC_URL}/images/eric.png` },
   { name: "John Valentino", job: "COO", image: `${process.env.PUBLIC_URL}/images/john.png` },
   { name: "Miral Eberhart", job: "Manager", image: `${process.env.PUBLIC_URL}/images/miral.png` },
-  { name: "David Damon", job: "CTO", image: `${process.env.PUBLIC_URL}/images/david.png` },
+  { name: "David Daman", job: "CTO", image: `${process.env.PUBLIC_URL}/images/david.png` },
 ];
 
 const AboutUs = () => {

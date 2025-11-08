@@ -28,7 +28,7 @@ const WhyChoose = () => {
   return (
     <section className="why-choose-section">
       <div className="container">
-        <h2 className="section-title">Inferno Roll-Shutters was built for Wildfire Zones</h2>
+        <h2 className="section-title">Inferno-Roll Shutters was built for Wildfire Zones</h2>
         
         <div className="features-grid">
           {features.map((feature, index) => (

@@ -30,7 +30,7 @@ const Showcase = () => {
         </div>
 
         {/* ✅ Arrow controls inside a wrapper for flex control */}
-        <div className="arrow-controls">
+        {/*<div className="arrow-controls">
           <img
             src={`${process.env.PUBLIC_URL}/images/Polygon 1.png`}
             alt="Previous"
@@ -43,7 +43,7 @@ const Showcase = () => {
             className="arrow arrow-right"
             onClick={handleNext}
           />
-        </div>
+        </div>*/}
       </div>
 
       <h2 className="showcase-subtitle">

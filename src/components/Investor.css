@@ -1,14 +1,15 @@
 .investor-section {
   background-color: #f0f0f0; /* light grey background */
-  padding: 1.5rem 2rem;
+  padding: 3% 9%; /* top/bottom 3%, left/right 8% */
   display: flex;
   justify-content: flex-start; /* content aligned left */
   align-items: center;
   text-align: left;
+  flex-wrap: wrap; /* allows wrapping if needed */
 }
 
 .investor-container {
-  width: 100%; /* ✅ take full width */
+  width: 90%; /* ✅ take full width */
   max-width: none; /* ✅ remove restriction */
   margin-left: 0; /* ✅ remove forced offset */
 }
@@ -35,6 +36,7 @@
   flex-wrap: wrap;
 }
 
+/* Buttons base style */
 .investor-btn {
   padding: 0.75rem 2rem;
   font-size: 1rem;
@@ -42,28 +44,38 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: bold; /* make text bold */
+  color: #000; /* black text */
 }
 
 /* Left button */
 .primary-btn {
   background-color: #F8AA15;
-  color: #fff;
+  color: #000; /* ensure text is black */
+  font-weight: bold; /* bold text */
 }
 
 .primary-btn:hover {
   background-color: #d18a10;
+  color: #000; /* keep text black on hover */
 }
 
-/* Right button */
+/* If you have other buttons, you can do the same */
 .secondary-btn {
-  background-color: #555555;
-  color: #fff;
-  min-width: 300px; /* wider button */
+  background-color: #ffffff; /* example */
+  color: #000;
+  font-weight: bold;
+  border: 2px solid #F8AA15;
 }
 
 .secondary-btn:hover {
-  background-color: #333333;
+  background-color: #f8f8f8;
 }
+
+/* Right button */
+
+
+
 
 /* Responsive */
 @media (max-width: 768px) {

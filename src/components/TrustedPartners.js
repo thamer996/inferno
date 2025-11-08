@@ -5,10 +5,11 @@ const partnerLogos = [
   `${process.env.PUBLIC_URL}/images/1.png`,
   `${process.env.PUBLIC_URL}/images/2.png`,
   `${process.env.PUBLIC_URL}/images/3.png`,
-  `${process.env.PUBLIC_URL}/images/5.png`,
+  
   `${process.env.PUBLIC_URL}/images/6.png`,
   `${process.env.PUBLIC_URL}/images/7.png`,
   `${process.env.PUBLIC_URL}/images/8.png`,
+  `${process.env.PUBLIC_URL}/images/5.png`,
   `${process.env.PUBLIC_URL}/images/9.png`,
 ];
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // <-- import Link for SPA navigation
 import './Navbar.css';
 
 const Navbar = () => {
@@ -7,11 +8,13 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo + Title centered */}
         <div className="logo-title-container">
-          <img
-            src={`${process.env.PUBLIC_URL}/images/LogoInferno.png`} 
-            alt="Logo"
-            className="logo"
-          />
+          <Link to="/"> {/* Clicking logo returns to home */}
+            <img
+              src={`${process.env.PUBLIC_URL}/images/LogoInferno.png`} 
+              alt="Logo"
+              className="logo"
+            />
+          </Link>
           <h1 className="logo-title">Powered by Sun & Security</h1>
         </div>
       </div>

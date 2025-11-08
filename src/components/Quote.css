@@ -1,3 +1,6 @@
+/* ======================== */
+/* === QUOTE SECTION === */
+/* ======================== */
 .quote {
   background-color: #0a1d4c;
   padding: 2rem 1rem;
@@ -17,39 +20,27 @@
 /* Left Side */
 .quote-left {
   position: relative;
-  flex: 0.8; /* smaller left section */
+  flex: 0.8;
   min-width: 300px;
 }
+
 .quote-form {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.95);
-  padding: 5rem;
+  padding: 2rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  width: 70%;
-  max-width: 300px;
-  margin-top:15rem;
+  width: 80%;
+  max-width: 500px;
+  margin-top: 17rem;
 }
 
-.quote-info-card h4 {
-  font-size: 1rem;
-  font-weight: bold; /* title bold */
-  margin: 0.3rem 0 0.2rem 0;
-  color: #0a1d4c;
-}
-
-.quote-info-card p {
-  font-size: 0.85rem;
-  color: #4b5563;
-  margin: 0;
-  font-weight: normal; /* normal text under title */
-}
 .quote-form input,
 .quote-form textarea {
   padding: 0.7rem;
@@ -81,21 +72,19 @@
 
 /* Right Side */
 .quote-right {
-  flex: 1.3; /* more space for right side */
+  flex: 1.3;
   min-width: 350px;
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-
-  /* Move right side slightly up */
-  margin-top: -3rem; /* adjust as needed */
+  margin-top: -3rem;
 }
 
 .quote-title {
   font-size: 2.8rem;
   font-weight: bold;
-  margin-bottom: 0.01rem; /* closer to subtitle */
+  margin-bottom: 0.01rem;
 }
 
 .quote-title span {
@@ -105,7 +94,7 @@
 .quote-text {
   font-size: 1.2rem;
   line-height: 1.6;
-  margin-top: 0.2rem; /* remove top margin to be closer to title */
+  margin-top: 0.2rem;
 }
 
 .quote-text .highlight {
@@ -120,8 +109,9 @@
   padding: 1.2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   color: #0a1d4c;
-  margin-top: -2rem; /* completely remove space */
+  margin-top: -2rem;
 }
+
 /* Info Cards Grid */
 .quote-info-grid {
   display: grid;
@@ -153,8 +143,9 @@
 
 .quote-info-card h4 {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 0.3rem;
+  color: #0a1d4c;
 }
 
 .quote-info-card p {
@@ -163,7 +154,7 @@
   margin: 0;
 }
 
-/* Button */
+/* Reserve Button */
 .quote-btn {
   background-color: #dc2626;
   color: #fff;
@@ -182,12 +173,181 @@
   background-color: #b91c1c;
 }
 
-/* Responsive */
+/* ======================== */
+/* === MODAL STYLES === */
+/* ======================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.modal-content h2 {
+  font-size: 1.6rem;
+  color: #0a1d4c;
+  margin-bottom: 0.5rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.modal-content textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.modal-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-btn {
+  background-color: #dc2626;
+  color: white;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+}
+
+.send-btn:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+.cancel-btn {
+  background-color: #ddd;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #bbb;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ======================== */
+/* === PAYMENT MODAL === */
+/* ======================== */
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.payment-option:hover {
+  background: #f8f8f8;
+}
+
+.payment-option input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+.payment-option input[type="radio"]:checked {
+  border-color: #dc2626;
+  background-color: #dc2626;
+}
+.quote-form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0a1d4c;
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+
+.quote-form-subtitle {
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: center;
+  font-weight: 600;
+}
+.payment-option input[type="radio"]:checked::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.payment-option label {
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ======================== */
+/* === RESPONSIVE === */
+/* ======================== */
 @media (max-width: 768px) {
   .quote-container {
     flex-direction: column;
     gap: 2rem;
   }
+
   .quote-form {
     position: relative;
     transform: none;
@@ -195,5 +355,12 @@
     left: auto;
     width: 100%;
     max-width: none;
+    margin-top: 2rem;
+  }
+
+  .quote-btn {
+    margin-left: 0;
+    align-self: center;
+    padding: 0.8rem 2rem;
   }
 }

@@ -30,18 +30,21 @@
 /* Cards grid */
 .fourcards .fourcards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Wider cards */
-  gap: 1rem;
-  max-width: 1350px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* smaller cards */
+  gap: 1rem; /* slightly tighter spacing */
+  max-width: 1200px; /* container width */
   width: 100%;
 }
 
+/* Individual card */
 .fourcards .card {
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 180px; /* ensures card doesn’t get too wide */
+  margin: 0 auto;    /* center inside grid cell */
 }
 
 .fourcards .card:hover {
@@ -49,33 +52,137 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Card images */
 .fourcards .card-image {
   width: 100%;
   object-fit: contain;
   display: block;
 }
 
-/* Individual image sizes */
-.fourcards .card-image-1 { height: 110px; }
-.fourcards .card-image-2 { height: 120px; }
-.fourcards .card-image-3 { height: 120px; }
-.fourcards .card-image-4 { height: 120px; }
+.fourcards .card-image-1,
+.fourcards .card-image-2,
+.fourcards .card-image-3,
+.fourcards .card-image-4 {
+  height: 80px; /* smaller images */
+}
 
+/* Card content */
 .fourcards .card-content {
-  padding: 0.8rem;
+  padding: 0.5rem; /* smaller padding */
   text-align: center;
   margin-top: -0.3rem;
 }
 
 .fourcards .card-title {
-  font-size: 1.1rem;
+  font-size: 1rem; /* smaller title */
   font-weight: bold;
   color: #FD7A00;
   margin: 0.3rem 0 0.2rem 0;
 }
 
 .fourcards .card-text {
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* smaller text */
   color: #000000;
   margin-top: 0.3rem;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .fourcards .fourcards-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.8rem;
+    max-width: 1000px;
+  }
+
+  .fourcards .card {
+    max-width: 150px;
+  }
+
+  .fourcards .card-image-1,
+  .fourcards .card-image-2,
+  .fourcards .card-image-3,
+  .fourcards .card-image-4 {
+    height: 70px;
+  }
+
+  .fourcards .card-title {
+    font-size: 0.95rem;
+  }
+
+  .fourcards .card-text {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fourcards .fourcards-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+    max-width: 95%;
+  }
+
+  .fourcards .card {
+    max-width: 120px;
+  }
+
+  .fourcards .card-image-1,
+  .fourcards .card-image-2,
+  .fourcards .card-image-3,
+  .fourcards .card-image-4 {
+    height: 60px;
+  }
+
+  .fourcards .card-title {
+    font-size: 0.9rem;
+  }
+/* Modal overlay - full screen */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+/* Modal box */
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh; /* limit modal height */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden; /* important so only body scrolls */
+}
+
+/* Scrollable content area */
+.modal-body {
+  padding: 1rem;
+  overflow-y: auto; /* makes this div scrollable */
+  flex-grow: 1; /* fills vertical space */
+}
+
+/* Close button */
+.modal-btn {
+  align-self: flex-end;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f81515;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+  .fourcards .card-text {
+    font-size: 0.7rem;
+  }
 }

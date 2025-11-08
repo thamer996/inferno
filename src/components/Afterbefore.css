@@ -3,11 +3,11 @@
   padding: 2rem 0;
   display: flex;
   justify-content: center;
-  background-color: #0a1d4c; /* ✅ Dark blue background */
+  background-color: #0a1d4c; /* Dark blue background */
 }
 
 .afterbefore-container.centered-image {
-  width: 90%; /* Leaves some space on the sides */
+  width: 90%;
   max-width: 1200px;
 }
 
@@ -15,7 +15,60 @@
   width: 100%;
   height: 80%;
   display: block;
-  border-radius: 10px; /* Optional: smooth corners */
+  border-radius: 10px;
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Nice soft shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons container */
+/* Buttons container */
+.afterbefore-buttons {
+  display: flex;
+  justify-content: space-between; /* keep buttons on opposite sides */
+  margin-top: -2rem; /* pull the buttons up over the image */
+}
+
+/* Buttons styles */
+.afterbefore-buttons button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  position: relative; /* enable shifting with top/left/right */
+}
+/* Left button */
+/* Left button */
+.btn-left {
+  background-color: #ffffff; /* white background */
+  color: #f81515; /* red text */
+  border: 3px solid #F8AA15; /* orange border on all sides */
+  font-weight: bold; /* bold text */
+  top: 20px; /* move down */
+  left: 200px; /* move right */
+  position: relative;
+  border-radius: 6px; /* rounded corners */
+  box-sizing: border-box; /* ensures border is included in button size */
+}
+
+.btn-left:hover {
+  background-color: #f8f8f8; /* slightly lighter on hover */
+}
+
+/* Right button */
+.btn-right {
+  background-color: #ffffff; /* white background */
+  color: #f81515; /* red text */
+  border: 3px solid #F8AA15; /* orange border on all sides */
+  font-weight: bold; /* bold text */
+  top: 20px; /* move down */
+  right: 200px; /* move left */
+  position: relative;
+  border-radius: 6px; /* rounded corners */
+  box-sizing: border-box; /* ensures border is included in button size */
+}
+
+.btn-right:hover {
+  background-color: #f8f8f8; /* slightly lighter on hover */
 }

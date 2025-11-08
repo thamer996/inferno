@@ -1,5 +1,5 @@
 .ourstory {
-  background-color: #0a2540; /* bleu foncé */
+  background-color: #0a2540; /* dark blue */
   padding: 3rem 0;
   display: flex;
   justify-content: center;
@@ -7,41 +7,45 @@
 
 .ourstory-container {
   background-color: #f7a600; /* orange */
-  padding: 0rem 3rem;  /* plus grand */
+  padding: 0 3rem;  /* horizontal padding in rem */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  width: 95%;
+  max-width: 75%; /* use percentage for max width */
+  width: 95%; /* relative width */
   position: relative;
-  border-radius: 8px;
+  border-radius: 0.5rem; /* 8px ≈ 0.5rem */
 }
 
 .ourstory-text {
-  max-width: 700px;
+  max-width: 80%; /* allow text to use full available space */
+  flex: 1; /* take remaining space next to image */
 }
 
 .ourstory-text h2 {
   color: #0a2540;
-  font-size: 2.4rem; /* titre plus grand */
+  font-size: 2.4rem; /* keeps relative size */
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
 .ourstory-text p {
   color: white;
-  font-size: 1.3rem; /* texte plus grand */
+  font-size: 1.5rem; /* 30px ≈ 1.875rem */
+  font-weight: bold;
   line-height: 1.8;
+  width: 100%; /* ensure paragraph uses full width */
 }
 
 .ourstory-image {
   position: absolute;
-  top:-130px;   /* monte plus haut */
-  right: -70px; /* dépasse plus */
-  width: 320px; /* bougie plus grande */
+  top: -8.4375rem;   /* 135px ≈ 8.4375rem */
+  right: -4.375rem; /* 70px ≈ 4.375rem */
+  width: 20.125rem; /* 370px ≈ 23.125rem */
 }
 
 .ourstory-image img {
   width: 100%;
   height: auto;
+  display: block;
 }

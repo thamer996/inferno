@@ -1,0 +1,85 @@
+.highlights-section {
+  background-color: #0a1d4c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+}
+
+.highlights-container {
+  background-color: #0a2540;
+  max-width: 800px;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.highlights-subtitle {
+  color: #f0ee74; /* Replace with the color you want */
+}
+
+.highlights-title {
+  color: #ffc107;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.highlights-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.highlights-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.highlights-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ✅ New class for titles */
+.highlight-point-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ffc107;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.highlight-red {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.highlights-contact {
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.highlights-contact h3 {
+  color: #ffc107;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlights-contact a {
+  color: #00b4ff;
+  text-decoration: underline;
+}
+
+.highlights-contact a:hover {
+  color: #33ccff;
+}
